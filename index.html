@@ -199,22 +199,99 @@
 
       <div class="main-content">
 
+        <!-- Single post structure -->
         {block:Posts}
         <article>
 
+          <!-- Photo post -->
+          {block:Photo}
+          <img src="{PhotoURL-500}" alt="{PhotoAlt}">
+          {block:Caption}
+          <p>{Caption}</p>
+          {/block:Caption}
+          {/block:Photo}
+
+          <!-- Text post -->
+          {block:Text}
+          {block:Title}
+          <h2>{Title}</h2>
+          {/block:Title}
+          {Body}
+          {/block:Text}
+
+          <!-- Tags list at the bottom of the post -->
+          {block:HasTags}
+          <ul>
+            {block:Tags}
+            <li>
+              <a href="{URLSafeTag}">{Tag}</a>
+            </li>
+            {/block:Tags}
+          </ul>
+          {/block:HasTags}
+
+          <!-- Article's footer with notes, date, actions -->
           <footer>
             <ul>
+              {block:NoteCount}
               <li>{NoteCountWithLabel}</li>
-              <li>Posted on <span>{DayOfMonth} {Month} {Year}</span></li>
+              {/block:NoteCount}
+              {block:Date}
+              <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+              {/block:Date}
             </ul>
             <ul>
               <li>Share</li>
-              <li>{ReblogButton size="16"} Reblog</li>
-              <li>{LikeButton size="16"} Love!!!</li>
+              <li>{ReblogButton size="16"}</li>
+              <li>{LikeButton size="16"}</li>
             </ul>
           </footer>
         </article>
         {/block:Posts}
+
+
+        <article>
+          <!-- Quote post -->
+          {block:Quote}
+          {block:Posts}
+          <blockquote>
+           {Quote}
+          </blockquote>
+          {block:Source}
+          {Source}
+          {/block:Source}
+          {/block:Posts}
+          {/block:Quote}
+
+          <!-- Tags list at the bottom of the post -->
+          {block:HasTags}
+          <ul>
+            {block:Tags}
+            <li>
+              <a href="{URLSafeTag}">{Tag}</a>
+            </li>
+            {/block:Tags}
+          </ul>
+          {/block:HasTags}
+
+          <!-- Article's footer with notes, date, actions -->
+          <footer>
+            <ul>
+              {block:NoteCount}
+              <li>{NoteCountWithLabel}</li>
+              {/block:NoteCount}
+              {block:Date}
+              <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+              {/block:Date}
+            </ul>
+            <ul>
+              <li>Share</li>
+              <li>{ReblogButton size="16"}</li>
+              <li>{LikeButton size="16"}</li>
+            </ul>
+          </footer>
+        </article>
+
 
       </div>
 
