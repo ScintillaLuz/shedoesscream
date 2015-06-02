@@ -197,106 +197,306 @@
 
       </div>
 
+
       <div class="main-content">
 
-        <!-- Single post structure -->
-        {block:Posts}
-        <article>
+        <ol>
+          {block:Posts}
 
           <!-- Photo post -->
           {block:Photo}
-          <img src="{PhotoURL-500}" alt="{PhotoAlt}">
-          {block:Caption}
-          <p>{Caption}</p>
-          {/block:Caption}
+          <li class="photo-post">
+            <article>
+
+              <!-- Body -->
+              <img src="{PhotoURL-500}" alt="{PhotoAlt}">
+              {block:Caption}
+              <p>{Caption}</p>
+              {/block:Caption}
+
+              <!-- Tags list at the bottom of the post -->
+              {block:HasTags}
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href="{URLSafeTag}">{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+              {/block:HasTags}
+
+              <!-- Article's footer with notes, date, actions -->
+              <footer>
+                <ul>
+                  {block:NoteCount}
+                  <li>{NoteCountWithLabel}</li>
+                  {/block:NoteCount}
+                  {block:Date}
+                  <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+                  {/block:Date}
+                </ul>
+                <ul>
+                  <li>Share</li>
+                  <li>{ReblogButton size="16"}</li>
+                  <li>{LikeButton size="16"}</li>
+                </ul>
+              </footer>
+            </article>
+          </li>
           {/block:Photo}
 
           <!-- Text post -->
           {block:Text}
-          {block:Title}
-          <h2>{Title}</h2>
-          {/block:Title}
-          {Body}
+          <li class="text-post">
+            <article>
+
+              <!-- Body -->
+              {block:Title}
+              <h2>{Title}</h2>
+              {/block:Title}
+              {Body}
+
+              <!-- Tags list at the bottom of the post -->
+              {block:HasTags}
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href="{URLSafeTag}">{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+              {/block:HasTags}
+
+              <!-- Article's footer with notes, date, actions -->
+              <footer>
+                <ul>
+                  {block:NoteCount}
+                  <li>{NoteCountWithLabel}</li>
+                  {/block:NoteCount}
+                  {block:Date}
+                  <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+                  {/block:Date}
+                </ul>
+                <ul>
+                  <li>Share</li>
+                  <li>{ReblogButton size="16"}</li>
+                  <li>{LikeButton size="16"}</li>
+                </ul>
+              </footer>
+            </article>
+          </li>
           {/block:Text}
 
-          <!-- Tags list at the bottom of the post -->
-          {block:HasTags}
-          <ul>
-            {block:Tags}
-            <li>
-              <a href="{URLSafeTag}">{Tag}</a>
-            </li>
-            {/block:Tags}
-          </ul>
-          {/block:HasTags}
-
-          <!-- Article's footer with notes, date, actions -->
-          <footer>
-            <ul>
-              {block:NoteCount}
-              <li>{NoteCountWithLabel}</li>
-              {/block:NoteCount}
-              {block:Date}
-              <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
-              {/block:Date}
-            </ul>
-            <ul>
-              <li>Share</li>
-              <li>{ReblogButton size="16"}</li>
-              <li>{LikeButton size="16"}</li>
-            </ul>
-          </footer>
-        </article>
-        {/block:Posts}
-
-
-        <article>
           <!-- Quote post -->
           {block:Quote}
-          {block:Posts}
-          <blockquote>
-           {Quote}
-          </blockquote>
-          {block:Source}
-          {Source}
-          {/block:Source}
-          {/block:Posts}
+          <li class="quote-post">
+            <article>
+
+              <!-- Body -->
+              <blockquote class="{Lenght}">
+               {Quote}
+              </blockquote>
+              {block:Source}
+              {Source}
+              {/block:Source}
+
+              <!-- Tags list at the bottom of the post -->
+              {block:HasTags}
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href="{URLSafeTag}">{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+              {/block:HasTags}
+
+              <!-- Article's footer with notes, date, actions -->
+              <footer>
+                <ul>
+                  {block:NoteCount}
+                  <li>{NoteCountWithLabel}</li>
+                  {/block:NoteCount}
+                  {block:Date}
+                  <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+                  {/block:Date}
+                </ul>
+                <ul>
+                  <li>Share</li>
+                  <li>{ReblogButton size="16"}</li>
+                  <li>{LikeButton size="16"}</li>
+                </ul>
+              </footer>
+            </article>
+          </li>
           {/block:Quote}
 
-          <!-- Tags list at the bottom of the post -->
-          {block:HasTags}
-          <ul>
-            {block:Tags}
-            <li>
-              <a href="{URLSafeTag}">{Tag}</a>
-            </li>
-            {/block:Tags}
-          </ul>
-          {/block:HasTags}
+          <!-- Chat post -->
+          {block:Chat}
+          <li class="chat-post">
+            <article>
+              {block:Title}
+              <h2>{Title}</h2>
+              {/block:Title}
+              <ol>
+                {block:Lines}
+                <li class="{Alt}"><span>{Name}</span> {Line}</li>
+                {/block:Lines}
+              </ol>
+            </article>
+          </li>
+          {/block:Chat}
 
-          <!-- Article's footer with notes, date, actions -->
-          <footer>
-            <ul>
-              {block:NoteCount}
-              <li>{NoteCountWithLabel}</li>
-              {/block:NoteCount}
-              {block:Date}
-              <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
-              {/block:Date}
-            </ul>
-            <ul>
-              <li>Share</li>
-              <li>{ReblogButton size="16"}</li>
-              <li>{LikeButton size="16"}</li>
-            </ul>
-          </footer>
-        </article>
+          <!-- Audio post -->
+          {block:Audio}
+          <li class="audio-post">
+            <article>
 
+              {block:AudioEmbed}
+              {AudioEmbed}
+              {/block:AudioEmbed}
+
+              {block:Caption}
+              {Caption}
+              {/block:Caption}
+
+              <!-- Tags list at the bottom of the post -->
+              {block:HasTags}
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href="{URLSafeTag}">{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+              {/block:HasTags}
+
+              <!-- Article's footer with notes, date, actions -->
+              <footer>
+                <ul>
+                  {block:NoteCount}
+                  <li>{NoteCountWithLabel}</li>
+                  {/block:NoteCount}
+                  {block:Date}
+                  <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+                  {/block:Date}
+                </ul>
+                <ul>
+                  <li>Share</li>
+                  <li>{ReblogButton size="16"}</li>
+                  <li>{LikeButton size="16"}</li>
+                </ul>
+              </footer>
+            </article>
+          </li>
+          {/block:Audio}
+
+          <!-- Video post -->
+          {block:Video}
+          <li class="video-post">
+            <article>
+
+              {VideoEmbed-700}
+              {block:Caption}
+              {Caption}
+              {/block:Caption}
+
+              <!-- Tags list at the bottom of the post -->
+              {block:HasTags}
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href="{URLSafeTag}">{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+              {/block:HasTags}
+
+              <!-- Article's footer with notes, date, actions -->
+              <footer>
+                <ul>
+                  {block:NoteCount}
+                  <li>{NoteCountWithLabel}</li>
+                  {/block:NoteCount}
+                  {block:Date}
+                  <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+                  {/block:Date}
+                </ul>
+                <ul>
+                  <li>Share</li>
+                  <li>{ReblogButton size="16"}</li>
+                  <li>{LikeButton size="16"}</li>
+                </ul>
+              </footer>
+            </article>
+          </li>
+          {/block:Video}
+
+          {block:Link}
+          <li class="link-post">
+            <article>
+
+              {block:Host}
+              <a href="{URL}">{Host}</a>
+              {/block:Host}
+
+              <a href="{URL}" target="{Target}">{Name}</a>
+
+              {block:Thumbnail}
+              <img src="{Thumbnail-HighRes}" alt="">
+              {/block:Thumbnail}
+
+              {block:Author}
+              {Author}
+              {/block:Author}
+
+              {block:Excerpt}
+              {Excerpt}
+              {/block:Excerpt}
+
+              {block:Description}
+              {Description}
+              {/block:Description}
+
+              <!-- Tags list at the bottom of the post -->
+              {block:HasTags}
+              <ul>
+                {block:Tags}
+                <li>
+                  <a href="{URLSafeTag}">{Tag}</a>
+                </li>
+                {/block:Tags}
+              </ul>
+              {/block:HasTags}
+
+              <!-- Article's footer with notes, date, actions -->
+              <footer>
+                <ul>
+                  {block:NoteCount}
+                  <li>{NoteCountWithLabel}</li>
+                  {/block:NoteCount}
+                  {block:Date}
+                  <li>Posted on <a href="#">{Month} {DayOfMonth}, {Year}</a></li>
+                  {/block:Date}
+                </ul>
+                <ul>
+                  <li>Share</li>
+                  <li>{ReblogButton size="16"}</li>
+                  <li>{LikeButton size="16"}</li>
+                </ul>
+              </footer>
+            </article>
+          </li>
+          {/block:Link}
+        {/block:Posts}
+        </ol>
+
+        {block:Pagination}
+        <div>
+        </div>
+        {/block:Pagination}
 
       </div>
-
-
-
 
     {block:IfEnableTwitterFeed}
     <script type="text/javascript">
