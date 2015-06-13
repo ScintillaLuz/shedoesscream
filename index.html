@@ -107,23 +107,26 @@
     <body>
 
       <header>
-        <ul>
-          <li><a href="">Articles</a></li>
-          <li><a href="">Links</a></li>
-          <li><a href="">About me</a></li>
-          <li><a href="">Email me</a></li>
-        </ul>
-        <form action="/search" method="get">
-          <input type="text" name="q" value="{SearchQuery}" placeholder="search for awesome&hellip;"/>
-          <input type="submit" value="Search"/>
-        </form>
+        <nav>
+          <div class="nav-container">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="">Articles</a></li>
+              <li class="nav-item"><a href="">Links</a></li>
+              <li class="nav-item"><a href="">About me</a></li>
+              <li class="nav-item"><a href="">Email me</a></li>
+            </ul>
+            <form action="/search" method="get" class="nav-search">
+              <input type="text" name="q" value="{SearchQuery}" placeholder="search for awesome&hellip;" class="nav-input"/>
+              <input type="submit" value="Search"/>
+            </form>
+          </div>
+        </nav>
+        <div class="hero-banner">
+          <img src="" alt="">
+        </div>
       </header>
 
-      <div class="hero-banner">
-        <img src="" alt="">
-      </div>
-
-      <div class="container">
+      <div class="">
 
         <div class="sidebar">
 
@@ -167,7 +170,7 @@
             <a href="">Get SDS in your feed</a>
           </div>
 
-          <div>
+          <div class="other-pages">
           {block:HasPages}
             <h5>Pages</h5>
             <ul class="pages">
@@ -178,7 +181,7 @@
           {/block:HasPages}
           </div>
 
-          <div>
+          <div class="blogroll">
             <h5>You should totally read</h5>
             <ul>
               <li><a href="http://shotgunseamstress.blogspot.de/">Shotgun Seamstress</a></li>
@@ -189,7 +192,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="tag-pages">
             <h5>Tags I've been overusing</h5>
             <ul>
               <li><a href=""></a></li>
