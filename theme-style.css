@@ -5,14 +5,93 @@
    2015, Berlin
    ==================================== */
 
+/* Typography */
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext");
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic");
 
-/* Header */
+/* Colors */
+/* Brand color #9B7FC0 */
 
+/*General styles*/
 body {
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 16px;
+  color: #525252;
+}
+
+/* Header Flexbox grid */
+
+header,
+footer {
+  padding: 2em 0;
+}
+
+nav {
+  margin: 0 auto;
+}
+
+.nav-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  justify-content: space-between;
+
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Blog content Flexbox grid */
+
+.container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  max-width: 1024px;
+}
+
+.main {
+  max-width: 60%;
+}
+
+.about        { order: 1; }
+.newsletter   { order: 2; }
+.main         { order: 3; }
+.facebook     { order: 4; }
+.other-pages  { order: 5; }
+.blog-roll    { order: 6; }
+.tag-pages    { order: 7; }
+
+
+/* Nav Menu */
+
+header {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+
+  color: #E7E7E7;
 }
 
 nav {
   padding: 1em;
   background-color: #343434;
+}
+
+.nav-item,
+.nav-search {
+  display: inline-block;
+}
+
+.nav-item {
+  padding-right: 1em;
 }
