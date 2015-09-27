@@ -1,112 +1,65 @@
 <!DOCTYPE html>
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}">
+  <html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>
-        {Title}
-        {block:IndexPage}&mdash; {PlaintextDescription}{/block:IndexPage}
-        {block:PermalinkPage}{block:PostSummary}&mdash; {PlaintextPostSummary}{/block:PostSummary}{block:PermalinkPage}
-        {block:SearchPage}&mdash; {lang:Search results for SearchQuery}{/block:SearchPage}
-        </title>
-        {block:Description}
-        <meta name="description" content="{MetaDescription}">
-        {/block:Description}
-        {block:PermalinkPage}
-        {block:Posts}
-        {block:Date}
-        <link rel="canonical" href="{Permalink}">
-        <link rel="shortlink" href="{ShortURL}">
-        {/block:Date}
-        {/block:Posts}
-        {/block:PermalinkPage}
-        <!-- Developmente CSS -->
-        <link rel="stylesheet" type="text/css" href="https://dl.dropboxusercontent.com/u/2085769/theme-style.css">
-        <!-- Fav Icons -->
-        <link rel="shortcut icon" href="{Favicon}">
-        <link rel="apple-touch-icon" href="{PortraitURL-128}">
-        <!-- RSS Feed -->
-        <link rel="alternate" type="application/rss+xml" href="{RSS}">
-        <!-- Feed / Social Usernames -->
-        <meta name="text:Google Analytics ID" content=""/>
-        <meta name="text:Twitter Username" content=""/>
-        <!-- Theme Options -->
-        <meta name="if:Enable Twitter Feed" content="0" />
-        <!-- Theme CSS -->
-        <style>
-            /* ==========================================================================
-               CSS Reset (http://meyerweb.com/eric/tools/css/reset/ v2.0)
-               ========================================================================== */
-            html, body, div, span, applet, object, iframe,
-            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-            a, abbr, acronym, address, big, cite, code,
-            del, dfn, em, img, ins, kbd, q, s, samp,
-            small, strike, strong, sub, sup, tt, var,
-            b, u, i, center,
-            dl, dt, dd, ol, ul, li,
-            fieldset, form, label, legend,
-            table, caption, tbody, tfoot, thead, tr, th, td,
-            article, aside, canvas, details, embed,
-            figure, figcaption, footer, header, hgroup,
-            menu, nav, output, ruby, section, summary,
-            time, mark, audio, video {
-              margin: 0;
-              padding: 0;
-              vertical-align: baseline;
-              border: 0;
-              font: inherit;
-              font-size: 100%;
-            }
-            article, aside, details, figcaption, figure,
-            footer, header, hgroup, menu, nav, section {
-              display: block;
-            }
-            body {
-              line-height: 1;
-            }
-
-            ol, ul {
-              list-style: none;
-            }
-            blockquote, q {
-              quotes: none;
-            }
-            blockquote:before, blockquote:after,
-            q:before, q:after {
-              content: '';
-              content: none;
-            }
-            table {
-              border-spacing: 0;
-              border-collapse: collapse;
-            }
-            * {
-              -webkit-box-sizing: border-box;
-              -moz-box-sizing:    border-box;
-              box-sizing:         border-box;
-            }
-            /* ==========================================================================
-               Base Styles
-               ========================================================================== */
-            body {
-            }
-            /* ==========================================================================
-               Media Queries
-               ========================================================================== */
-            @-ms-viewport { width: device-width; }
-            @-o-viewport { width: device-width; }
-            @viewport { width: device-width; }
-            @media screen and (min-width:0px) {
-            }
-        </style>
-        <!-- Custom CSS -->
-        <style>
-        {CustomCSS}
-        </style>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <title>
+      {Title}
+      {block:IndexPage}&mdash; {PlaintextDescription}{/block:IndexPage}
+      {block:PermalinkPage}{block:PostSummary}&mdash; {PlaintextPostSummary}{/block:PostSummary}{block:PermalinkPage}
+      {block:SearchPage}&mdash; {lang:Search results for SearchQuery}{/block:SearchPage}
+      </title>
+      {block:Description}
+      <meta name="description" content="{MetaDescription}">
+      {/block:Description}
+      {block:PermalinkPage}
+      {block:Posts}
+      {block:Date}
+      <link rel="canonical" href="{Permalink}">
+      <link rel="shortlink" href="{ShortURL}">
+      {/block:Date}
+      {/block:Posts}
+      {/block:PermalinkPage}
+      <!-- Development CSS -->
+      <link rel="stylesheet" type="text/css" href="https://dl.dropboxusercontent.com/u/2085769/theme-style.css">
+      <!-- Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+      <!-- Fav Icons -->
+      <link rel="shortcut icon" href="{Favicon}">
+      <link rel="apple-touch-icon" href="{PortraitURL-128}">
+      <!-- RSS Feed -->
+      <link rel="alternate" type="application/rss+xml" href="{RSS}">
+      <!-- Feed / Social Usernames -->
+      <meta name="text:Google Analytics ID" content=""/>
+      <meta name="text:Twitter Username" content=""/>
+      <!-- Theme Options -->
+      <meta name="if:Enable Twitter Feed" content="0" />
+      <!-- Theme CSS -->
+      <style>
+        /* ==========================================================================
+           Base Styles
+           ========================================================================== */
+        body {
+        }
+        /* ==========================================================================
+           Media Queries
+           ========================================================================== */
+        @-ms-viewport { width: device-width; }
+        @-o-viewport { width: device-width; }
+        @viewport { width: device-width; }
+        @media screen and (min-width:0px) {
+        }
+      </style>
+      <!-- Custom CSS -->
+      <style>
+      {CustomCSS}
+      </style>
     </head>
+
     <body>
 
       <header>
@@ -116,10 +69,10 @@
               <li class="nav-item"><a href="">Articles</a></li>
               <li class="nav-item"><a href="">Links</a></li>
               <li class="nav-item"><a href="">About me</a></li>
-              <li class="nav-item"><a href="">Email me</a></li>
+              <li class="nav-item"><a href=""><span>Email me</span></a></li>
             </ul>
             <form action="/search" method="get" class="nav-search">
-              <input type="text" name="q" value="{SearchQuery}" placeholder="search for awesome&hellip;" class="nav-input"/>
+              <input type="search" name="q" value="{SearchQuery}" placeholder="search for awesome&hellip;" class="nav-input"/>
               <input type="submit" value="Search"/>
             </form>
           </div>
@@ -132,26 +85,27 @@
       <div class="container">
 
         <div class="main">
-
           <ol>
             {block:Posts}
 
             <!-- Photo post -->
             {block:Photo}
             <li class="photo-post">
-              <article>
+              <article class="post-container">
 
                 <!-- Body -->
+                <div class="post-body">
+                  {block:Caption}
+                  <p>{Caption}</p>
+                  {/block:Caption}
+                </div>
                 <img src="{PhotoURL-500}" alt="{PhotoAlt}">
-                {block:Caption}
-                <p>{Caption}</p>
-                {/block:Caption}
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
-                <ul>
+                <ul class="tag-list">
                   {block:Tags}
-                  <li>
+                  <li class="tag">
                     <a href="{TagURL}">{Tag}</a>
                   </li>
                   {/block:Tags}
@@ -159,8 +113,8 @@
                 {/block:HasTags}
 
                 <!-- Article's footer with notes, date, actions -->
-                <footer>
-                  <ul>
+                <footer class="post-footer">
+                  <ul class="list-menu post-info">
                     {block:NoteCount}
                     <li><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
                     {/block:NoteCount}
@@ -168,7 +122,7 @@
                     <li>Posted on <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></li>
                     {/block:Date}
                   </ul>
-                  <ul>
+                  <ul class="list-menu post-appreciation">
                     <li>Share</li>
                     <li>{ReblogButton size="16"}</li>
                     <li>{LikeButton size="16"}</li>
@@ -188,19 +142,23 @@
             <!-- Text post -->
             {block:Text}
             <li class="text-post">
-              <article>
+              <article class="post-container">
 
                 <!-- Body -->
-                {block:Title}
-                <h2><a href="{Permalink}">{Title}</a></h2>
-                {/block:Title}
-                {Body}
+                <div class="post-body">
+                  {block:Title}
+                  <h2>
+                    <a href="{Permalink}">{Title}</a>
+                  </h2>
+                  {/block:Title}
+                  {Body}
+                </div>
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
-                <ul>
+                <ul class="tag-list">
                   {block:Tags}
-                  <li>
+                  <li class="tag">
                     <a href="{TagURL}">{Tag}</a>
                   </li>
                   {/block:Tags}
@@ -208,8 +166,8 @@
                 {/block:HasTags}
 
                 <!-- Article's footer with notes, date, actions -->
-                <footer>
-                  <ul>
+                <footer class="post-footer">
+                  <ul class="list-menu post-info">
                     {block:NoteCount}
                     <li><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
                     {/block:NoteCount}
@@ -217,7 +175,7 @@
                     <li>Posted on <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></li>
                     {/block:Date}
                   </ul>
-                  <ul>
+                  <ul class="list-menu post-appreciation">
                     <li>Share</li>
                     <li>{ReblogButton size="16"}</li>
                     <li>{LikeButton size="16"}</li>
@@ -237,21 +195,23 @@
             <!-- Quote post -->
             {block:Quote}
             <li class="quote-post">
-              <article>
+              <article class="post-container">
 
                 <!-- Body -->
-                <blockquote class="{Lenght}">
-                 {Quote}
-                </blockquote>
-                {block:Source}
-                {Source}
-                {/block:Source}
+                <div class="post-body">
+                  <blockquote class="{Lenght}">
+                   {Quote}
+                  </blockquote>
+                  {block:Source}
+                  {Source}
+                  {/block:Source}
+                </div>
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
-                <ul>
+                <ul class="tag-list">
                   {block:Tags}
-                  <li>
+                  <li class="tag">
                     <a href="{TagURL}">{Tag}</a>
                   </li>
                   {/block:Tags}
@@ -259,8 +219,8 @@
                 {/block:HasTags}
 
                 <!-- Article's footer with notes, date, actions -->
-                <footer>
-                  <ul>
+                <footer class="post-footer">
+                  <ul class="list-menu post-info">
                     {block:NoteCount}
                     <li><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
                     {/block:NoteCount}
@@ -268,7 +228,7 @@
                     <li>Posted on <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></li>
                     {/block:Date}
                   </ul>
-                  <ul>
+                  <ul class="list-menu post-appreciation">
                     <li>Share</li>
                     <li>{ReblogButton size="16"}</li>
                     <li>{LikeButton size="16"}</li>
@@ -288,7 +248,7 @@
             <!-- Chat post -->
             {block:Chat}
             <li class="chat-post">
-              <article>
+              <article class="post-container">
                 {block:Title}
                 <h2>{Title}</h2>
                 {/block:Title}
@@ -304,21 +264,25 @@
             <!-- Audio post -->
             {block:Audio}
             <li class="audio-post">
-              <article>
+              <article class="post-container">
 
-                {block:AudioEmbed}
-                {AudioEmbed}
-                {/block:AudioEmbed}
+                <!-- Body -->
 
-                {block:Caption}
-                {Caption}
-                {/block:Caption}
+                <div class="post-body">
+                  {block:AudioEmbed}
+                  {AudioEmbed}
+                  {/block:AudioEmbed}
+
+                  {block:Caption}
+                  {Caption}
+                  {/block:Caption}
+                </div>
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
-                <ul>
+                <ul class="tag-list">
                   {block:Tags}
-                  <li>
+                  <li class="tag">
                     <a href="{TagURL}">{Tag}</a>
                   </li>
                   {/block:Tags}
@@ -326,8 +290,8 @@
                 {/block:HasTags}
 
                 <!-- Article's footer with notes, date, actions -->
-                <footer>
-                  <ul>
+                <footer class="post-footer">
+                  <ul class="list-menu post-info">
                     {block:NoteCount}
                     <li><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
                     {/block:NoteCount}
@@ -335,7 +299,7 @@
                     <li>Posted on <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></li>
                     {/block:Date}
                   </ul>
-                  <ul>
+                  <ul class="list-menu post-appreciation">
                     <li>Share</li>
                     <li>{ReblogButton size="16"}</li>
                     <li>{LikeButton size="16"}</li>
@@ -355,18 +319,21 @@
             <!-- Video post -->
             {block:Video}
             <li class="video-post">
-              <article>
+              <article class="post-container">
 
-                {VideoEmbed-700}
-                {block:Caption}
-                {Caption}
-                {/block:Caption}
+                <!-- Body -->
+                <div class="post-body">
+                  {VideoEmbed-700}
+                  {block:Caption}
+                  {Caption}
+                  {/block:Caption}
+                </div>
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
-                <ul>
+                <ul class="tag-list">
                   {block:Tags}
-                  <li>
+                  <li class="tag">
                     <a href="{TagURL}">{Tag}</a>
                   </li>
                   {/block:Tags}
@@ -374,8 +341,8 @@
                 {/block:HasTags}
 
                 <!-- Article's footer with notes, date, actions -->
-                <footer>
-                  <ul>
+                <footer class="post-footer">
+                  <ul class="list-menu post-info">
                     {block:NoteCount}
                     <li><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
                     {/block:NoteCount}
@@ -383,7 +350,7 @@
                     <li>Posted on <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></li>
                     {/block:Date}
                   </ul>
-                  <ul>
+                  <ul class="list-menu post-appreciation">
                     <li>Share</li>
                     <li>{ReblogButton size="16"}</li>
                     <li>{LikeButton size="16"}</li>
@@ -402,35 +369,37 @@
 
             {block:Link}
             <li class="link-post">
-              <article>
+              <article class="post-container">
 
-                {block:Host}
-                <a href="{URL}">{Host}</a>
-                {/block:Host}
+                <!-- Body -->
+                <div class="post-body">
+                  {block:Host}
+                  <a href="{URL}">{Host}</a>
+                  {/block:Host}
+                  <a href="{URL}" target="{Target}">{Name}</a>
 
-                <a href="{URL}" target="{Target}">{Name}</a>
+                  {block:Thumbnail}
+                  <img src="{Thumbnail-HighRes}" alt="">
+                  {/block:Thumbnail}
 
-                {block:Thumbnail}
-                <img src="{Thumbnail-HighRes}" alt="">
-                {/block:Thumbnail}
+                  {block:Author}
+                  {Author}
+                  {/block:Author}
 
-                {block:Author}
-                {Author}
-                {/block:Author}
+                  {block:Excerpt}
+                  {Excerpt}
+                  {/block:Excerpt}
 
-                {block:Excerpt}
-                {Excerpt}
-                {/block:Excerpt}
-
-                {block:Description}
-                {Description}
-                {/block:Description}
+                  {block:Description}
+                  {Description}
+                  {/block:Description}
+                </div>
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
-                <ul>
+                <ul class="tag-list">
                   {block:Tags}
-                  <li>
+                  <li class="tag">
                     <a href="{TagURL}">{Tag}</a>
                   </li>
                   {/block:Tags}
@@ -438,8 +407,8 @@
                 {/block:HasTags}
 
                 <!-- Article's footer with notes, date, actions -->
-                <footer>
-                  <ul>
+                <footer class="post-footer">
+                  <ul class="list-menu post-info">
                     {block:NoteCount}
                     <li><a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
                     {/block:NoteCount}
@@ -447,7 +416,7 @@
                     <li>Posted on <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></li>
                     {/block:Date}
                   </ul>
-                  <ul>
+                  <ul class="list-menu post-appreciation">
                     <li>Share</li>
                     <li>{ReblogButton size="16"}</li>
                     <li>{LikeButton size="16"}</li>
@@ -480,75 +449,80 @@
           {/block:Pagination}
         </div>
 
-        {block:Description}
-        <div class="side-element about">
-          <h5>Why {Title}?</h5>
-          <p>{Description}</p>
-        </div>
-        {/block:Description}
+        <div class="sidebar-engage">
+          {block:Description}
+          <div class="about">
+            <h5>Why {Title}?</h5>
+            <p>{Description}</p>
+          </div>
+          {/block:Description}
 
-        <div class="side-element newsletter">
-          <img src="" alt="">
-          <h5>The Newsletter</h5>
-          <p>New articles &amp; suggested reads in your e-mail, not that often and not that regularly. Basically when I have time. But cool stuff.</p>
+          <div class="newsletter">
+            <img src="" alt="">
+            <h5>The Newsletter</h5>
+            <p>New articles &amp; suggested reads in your e-mail, not that often and not that regularly. Basically when I have time. But cool stuff.</p>
 
-          <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-            <form action="//tumblr.us10.list-manage.com/subscribe/post?u=70e9c16272b17e864a8f08a8e&amp;id=23b8f9a747" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
+            <!-- Begin MailChimp Signup Form -->
+              <div id="mc_embed_signup">
+              <form action="//tumblr.us10.list-manage.com/subscribe/post?u=70e9c16272b17e864a8f08a8e&amp;id=23b8f9a747" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
 
-            <div class="mc-field-group">
-              <label for="mce-EMAIL">Your e-mail </span>
-            </label>
-              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-              <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_70e9c16272b17e864a8f08a8e_23b8f9a747" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Send me shit" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-            </form>
-            </div>
-          <!--End mc_embed_signup-->
-        </div>
+              <div class="mc-field-group">
+                <label for="mce-EMAIL">Your e-mail </span>
+              </label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+              </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_70e9c16272b17e864a8f08a8e_23b8f9a747" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Send me shit" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                  </div>
+              </form>
+              </div>
+            <!--End mc_embed_signup-->
 
-        <div class="side-element facebook">
-          <img src="" alt="">
-          <a href="">Get SDS in your feed</a>
-        </div>
+          </div>
 
-        {block:HasPages}
-        <div class="side-element other-pages">
-          <h5>Pages</h5>
-          <ul class="pages">
-            {block:Pages}
-            <li><a href="{URL}">{Label}</a></li>
-            {/block:Pages}
-          </ul>
-        </div>
-        {/block:HasPages}
-
-        <div class="side-element blogroll">
-          <h5>You should totally read</h5>
-          <ul>
-            <li><a href="http://shotgunseamstress.blogspot.de/">Shotgun Seamstress</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul>
+          <div class="facebook">
+            <img src="" alt="">
+            <a href="">Get SDS in your feed</a>
+          </div>
         </div>
 
-        <div class="side-element tag-pages">
-          <h5>Tags I've been overusing</h5>
-          <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul>
-        </div>
+        <div class="sidebar-explore">
 
+          {block:HasPages}
+          <div class="other-pages">
+            <h5>Pages</h5>
+            <ul class="pages">
+              {block:Pages}
+              <li><a href="{URL}">{Label}</a></li>
+              {/block:Pages}
+            </ul>
+          </div>
+          {/block:HasPages}
+
+          <div class="blogroll">
+            <h5>You should totally read</h5>
+            <ul>
+              <li><a href="http://shotgunseamstress.blogspot.de/">Shotgun Seamstress</a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+
+          <div class="tag-pages">
+            <h5>Tags I've been overusing</h5>
+            <ul>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <footer>
@@ -556,8 +530,8 @@
         <p>SheDoesScream is only my point of view&emsp;/&emsp;<a href="mailto:shedoesscream@gmail.com">Write me!</a></p>
       </footer>
 
-    {block:IfEnableTwitterFeed}
-    <script type="text/javascript">
+      {block:IfEnableTwitterFeed}
+      <script type="text/javascript">
         function recent_tweets(data) {
           for (i=0; i<data.length; i++) {
             document.getElementById("tweets").innerHTML =
@@ -569,10 +543,10 @@
           }
           document.getElementById("twitter").style.display = 'block';
         }
-    </script>
-    {/block:IfEnableTwitterFeed}
-    {block:IfGoogleAnalyticsID}
-    <script type="text/javascript">
+      </script>
+      {/block:IfEnableTwitterFeed}
+      {block:IfGoogleAnalyticsID}
+      <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', '{GoogleAnalyticsID}']);
         _gaq.push(['_trackPageview']);
@@ -581,7 +555,7 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-    </script>
-    {/block:IfGoogleAnalyticsID}
+      </script>
+      {/block:IfGoogleAnalyticsID}
     </body>
 </html>
