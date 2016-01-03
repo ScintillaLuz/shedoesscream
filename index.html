@@ -266,13 +266,16 @@
             <li class="audio-post">
               <article class="post-container">
 
-                <!-- Body -->
-
-                <div class="post-body">
+                <!-- Media container -->
+                <div class="media-container">
                   {block:AudioEmbed}
                   {AudioEmbed}
                   {/block:AudioEmbed}
+                </div>
 
+                <!-- Body -->
+
+                <div class="post-body">
                   {block:Caption}
                   {Caption}
                   {/block:Caption}
@@ -321,9 +324,13 @@
             <li class="video-post">
               <article class="post-container">
 
+                <!-- Media container -->
+                <div class="media-container">
+                  {VideoEmbed-700}
+                </div>
+
                 <!-- Body -->
                 <div class="post-body">
-                  {VideoEmbed-700}
                   {block:Caption}
                   {Caption}
                   {/block:Caption}
