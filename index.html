@@ -93,13 +93,19 @@
             <li class="photo-post">
               <article class="post-container">
 
+                <div class="media-container">
+                  <img src="{PhotoURL-500}" {block:HighRes}style="display:none"{/block:HighRes}/>
+                  {block:HighRes}
+                  <img src="{PhotoURL-HighRes}" class="highres"/>
+                  {/block:HighRes}
+                </div>
+
                 <!-- Body -->
                 <div class="post-body">
                   {block:Caption}
                   <p>{Caption}</p>
                   {/block:Caption}
                 </div>
-                <img src="{PhotoURL-500}" alt="{PhotoAlt}">
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
