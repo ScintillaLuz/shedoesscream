@@ -342,9 +342,8 @@ nav {
 
 .post-body p a {
   font-weight: 700;
-  color: #2C2C2C;
-  background-color: #FFE3FF;
-  border-bottom: 1px solid #2C2C2C;
+  color: #B54FCA;
+  border-bottom: 1px solid #B54FCA;
 
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -353,7 +352,9 @@ nav {
 }
 
 .post-body p a:hover {
-  background-color: #E6E6E6;
+  color: #2C2C2C;
+  border-bottom: 1px solid #2C2C2C;
+  background-color: #FDE8FD;
 }
 
 .post-body p strong {
@@ -443,11 +444,34 @@ nav {
   background-color: #FFE3FF;
 }
 
-.text-post blockquote {
+.text-post blockquote,
+.video-post blockquote,
+.audio-post blockquote {
   background-color: #F5F5F5;
   padding: 1.250rem 1.5rem;
   border-left: 1px solid #525252;
   margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.text-post blockquote p,
+.video-post blockquote p,
+.audio-post blockquote p {
+  font-style: italic;
+}
+
+.text-post blockquote p strong,
+.video-post blockquote p strong,
+.audio-post blockquote p strong {
+  font-weight: 700;
+}
+
+.text-post blockquote p a,
+.video-post blockquote p a,
+.audio-post blockquote p a {
+  color: #B54FCA;
+  border-bottom: none;
+  background-color: transparent;
 
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -455,23 +479,9 @@ nav {
   transition: all 0.3s ease;
 }
 
-.text-post blockquote p {
-  font-style: italic;
-  margin-bottom: 0;
-  margin-top: 1rem;
-}
-
-.text-post blockquote p strong {
-  font-weight: 700;
-}
-
-.text-post blockquote p a {
-  color: #B54FCA;
-  border-bottom: none;
-  background-color: transparent;
-}
-
-.text-post blockquote p a:hover {
+.text-post blockquote p a:hover,
+.video-post blockquote p a:hover,
+.audio-post blockquote p a:hover {
   border-bottom: 1px solid #B54FCA;
   background-color: transparent;
 }
@@ -482,17 +492,47 @@ iframe {
   max-width: 100%;
 }
 
-.video-post .post-container .post-body iframe,
-.audio-post .post-container .post-body iframe {
+.video-post .post-container .media-container,
+.audio-post .post-container .media-container {
   padding: 0.75rem 0.75rem 1rem 0.75rem;
 }
 
-.video-post .post-container .post-body p,
-.audio-post .post-container .post-body p {
+.video-post .post-container .post-body,
+.audio-post .post-container .post-body {
   padding: 0 2.375rem 1.125rem 2.375rem;
 }
 
+/* Quote post */
+
+.quote-post .post-container {
+  background-color: #2D2D2D;
+}
+
+.quote-post .post-container .post-body {
+  color: #E6E6E6;
+  font-size: 1.250em;
+  line-height: 1.563em;
+}
+
+.quote-post .post-container .post-body {
+  padding: 2.375rem 2.375rem 1.125rem 2.375rem;
+}
+
+.quote-post .post-container .post-body blockquote::before {
+  content: '\201C';
+}
+
+.quote-post .post-container .post-body blockquote::after {
+  content: '\201D';
+}
+
+
 /* Link Post */
+
+.link-post .post-container .post-body .link-img {
+  display: block;
+  max-width: 100%;
+}
 
 .link-post .post-container .post-body p {
   padding: 0 2.375rem 1.125rem 2.375rem;
