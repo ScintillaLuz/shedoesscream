@@ -8,12 +8,11 @@
 /*
   Colors
 
-  Brand color = #9B7FC0
-  General black = #2C2C2C
+  Black Text = #2C2C2C
+  Link = #A84FCA
 
   Menu
   Links = #E7E7E7
-  Email link = #9B7FC0
   Search input bg = #494949
   Placeholder text color = #9B9B9B
 
@@ -25,7 +24,6 @@
   Border bg = #D1D1D1
   Main heading =
   Text = #2C2C2C
-  Link bg = #F3E6F8
   Link bg hover = #FFF6C1
 
   Quote
@@ -37,12 +35,11 @@
   links visited =
 
   Quote
-  bg =
-  links =
+  Background =
 
   Tags
-  Default color =
-  Hover color =
+  Color =
+  Hover =
 
 */
 
@@ -59,6 +56,7 @@ html {
   /* Prevent browser to inflate fonts size on mobile */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
 }
 
 html, body, h1, h2, h3, h4, h5, ol, ul, p, blockquote, figure, fieldset, form, iframe, blockquote, audio, video, article, header, footer {
@@ -73,7 +71,7 @@ h1, h2, h3, h4, h5 {
 
 a {
   text-decoration: none;
-  color: #B54FCA;
+  color: #A84FCA;
 }
 
 a:hover,
@@ -108,10 +106,14 @@ ol, ul {
   list-style: none;
 }
 
+figure {
+  margin: 0;
+  line-height: 0;
+}
+
 /* General styles */
 body {
   font-family: 'Merriweather', Georgia, serif;
-  font-size: 16px;
   color: #2C2C2C;
   background: #FFF;
 
@@ -140,7 +142,7 @@ iframe body #player {
 
   justify-content: space-between;
 
-  max-width: 1280px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -157,7 +159,7 @@ iframe body #player {
   flex-flow: row nowrap;
   justify-content: center;
 
-  max-width: 1280px;
+  max-width: 1176px;
   margin: 0 auto;
 }
 
@@ -236,7 +238,7 @@ nav {
 
 nav {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1176px;
 }
 
 .nav-item,
@@ -258,7 +260,7 @@ nav {
 }
 
 .nav-item a span {
-  color: #B54FCA;
+  color: #A84FCA;
 }
 
 .nav-search input[type=search] {
@@ -328,8 +330,8 @@ nav {
 }
 
 .post-body {
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.875rem;
+  line-height: 1.438rem;
 }
 
 .post-body p {
@@ -342,8 +344,9 @@ nav {
 
 .post-body p a {
   font-weight: 700;
-  color: #B54FCA;
-  border-bottom: 1px solid #B54FCA;
+  color: #2C2C2C;
+  border-bottom: 1px solid #2C2C2C;
+  background-color: #FDE8FD;
 
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -352,13 +355,18 @@ nav {
 }
 
 .post-body p a:hover {
-  color: #2C2C2C;
-  border-bottom: 1px solid #2C2C2C;
-  background-color: #FDE8FD;
+  color: #A84FCA;
+  border-bottom: 1px solid #A84FCA;
+  background-color: transparent;
 }
 
 .post-body p strong {
   font-weight: 700;
+}
+
+.post-container .post-body figure {
+  margin: 1.5rem 0;
+  text-align: center;
 }
 
 /* Post Footer */
@@ -385,13 +393,13 @@ nav {
   font-family: 'Open Sans';
   font-size: 0.813rem;
   font-weight: 600;
-  color: #ABABAB;
+  color: #969696;
   letter-spacing: 0.063rem;
 
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transtion: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transtion: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .tag-list .tag a:hover {
@@ -419,11 +427,11 @@ nav {
 /* Text Post */
 
 .text-post .post-container .post-body {
-  padding: 2.375rem 2.375rem 1.125rem 2.375rem;
+  padding: 2rem 2rem 1.125rem 2rem;
 }
 
 .text-post h2 {
-  font-size: 2.125rem;
+  font-size: 2rem;
   line-height: 1.5em;
   margin-bottom: 2rem;
 }
@@ -440,11 +448,12 @@ nav {
 }
 
 .text-post h2 a:hover {
-  color: #333333;
-  background-color: #FFE3FF;
+  color: #A84FCA;
+  border-bottom: 1px solid #A84FCA;
 }
 
 .text-post blockquote,
+.photo-post blockquote,
 .video-post blockquote,
 .audio-post blockquote {
   background-color: #F5F5F5;
@@ -455,22 +464,25 @@ nav {
 }
 
 .text-post blockquote p,
+.photo-post blockquote p,
 .video-post blockquote p,
 .audio-post blockquote p {
   font-style: italic;
 }
 
 .text-post blockquote p strong,
+.photo-post blockquote p strong,
 .video-post blockquote p strong,
 .audio-post blockquote p strong {
   font-weight: 700;
 }
 
 .text-post blockquote p a,
+.photo-post blockquote p a,
 .video-post blockquote p a,
 .audio-post blockquote p a {
-  color: #B54FCA;
-  border-bottom: none;
+  color: #A84FCA;
+  border-bottom: 1px solid transparent;
   background-color: transparent;
 
   -webkit-transition: all 0.3s ease;
@@ -480,9 +492,10 @@ nav {
 }
 
 .text-post blockquote p a:hover,
+.photo-post blockquote p a:hover,
 .video-post blockquote p a:hover,
 .audio-post blockquote p a:hover {
-  border-bottom: 1px solid #B54FCA;
+  border-bottom: 1px solid #A84FCA;
   background-color: transparent;
 }
 
@@ -492,9 +505,14 @@ iframe {
   max-width: 100%;
 }
 
+.photo-post .post-container .media-container,
 .video-post .post-container .media-container,
 .audio-post .post-container .media-container {
-  padding: 0.75rem 0.75rem 1rem 0.75rem;
+  padding: 0 0 1rem 0;
+}
+
+.audio-post .post-container .media-container {
+  margin: -1px;
 }
 
 .video-post .post-container .post-body,
@@ -508,24 +526,45 @@ iframe {
   background-color: #2D2D2D;
 }
 
-.quote-post .post-container .post-body {
-  color: #E6E6E6;
+.quote-post .post-container .post-body blockquote {
+  color: #FBFBFB;
   font-size: 1.250em;
   line-height: 1.563em;
 }
 
 .quote-post .post-container .post-body {
-  padding: 2.375rem 2.375rem 1.125rem 2.375rem;
+  padding: 2.375rem 2.375rem 0rem 2.375rem;
 }
 
-.quote-post .post-container .post-body blockquote::before {
-  content: '\201C';
+.quote-post .post-container .source {
+  display: flex;
+  margin: 1rem 0 1.5rem 0;
+  font-size: 1rem;
+  font-style: italic;
+  color: #757575;
 }
 
-.quote-post .post-container .post-body blockquote::after {
-  content: '\201D';
+.quote-post .post-container .source::before {
+  content: '\2014';
 }
 
+.quote-post .post-container .source a {
+  color: #A84FCA;
+  background-color: transparent;
+}
+
+.quote-post .tag-list .tag a {
+  color: #757575;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transtion: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.quote-post .tag-list .tag a:hover {
+  color: #FFF;
+}
 
 /* Link Post */
 
@@ -536,5 +575,11 @@ iframe {
 
 .link-post .post-container .post-body p {
   padding: 0 2.375rem 1.125rem 2.375rem;
+}
+
+/* Photo Post */
+
+.photo-post .post-container .post-body {
+  padding: 0 2.375rem 0 2.375rem;
 }
 
