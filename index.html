@@ -89,15 +89,22 @@
             {block:Posts}
 
             <!-- Photo post -->
-            {block:Photo}
+
             <li class="photo-post">
               <article class="post-container">
 
                 <div class="media-container">
+                  {block:Photo}
                   <img src="{PhotoURL-500}" {block:HighRes}style="display:none"{/block:HighRes}/>
                   {block:HighRes}
                   <img src="{PhotoURL-HighRes}" class="highres"/>
                   {/block:HighRes}
+                  {block:Caption}
+                  {Caption}
+                  {/block:Caption}
+                  {/block:Photo}
+                  {block:Photoset}
+                  {block:/Photoset}
                 </div>
 
                 <!-- Body -->
@@ -143,7 +150,7 @@
 
               </article>
             </li>
-            {/block:Photo}
+
 
             <!-- Text post -->
             {block:Text}
@@ -208,9 +215,11 @@
                   <blockquote class="{Lenght}">
                    {Quote}
                   </blockquote>
-                  {block:Source}
-                  {Source}
-                  {/block:Source}
+                  <p class="source">
+                   {block:Source}
+                   {Source}
+                   {/block:Source}
+                  </p>
                 </div>
 
                 <!-- Tags list at the bottom of the post -->
@@ -386,14 +395,14 @@
 
                 <!-- Body -->
                 <div class="post-body">
+                  <a href="{URL}">
+
+
+                  </a>
                   {block:Host}
                   <a href="{URL}" class="link-source">{Host}</a>
                   {/block:Host}
                   <a href="{URL}" target="{Target}" class="link-title">{Name}</a>
-
-                  {block:Thumbnail}
-                  <img src="{Thumbnail-HighRes}" alt="link source image" class="link-img">
-                  {/block:Thumbnail}
 
                   {block:Author}
                   {Author}
@@ -410,7 +419,7 @@
 
                 <!-- Tags list at the bottom of the post -->
                 {block:HasTags}
-                <ul class="tag-list">
+                <ul class="inline-list tag-list">
                   {block:Tags}
                   <li class="tag">
                     <a href="{TagURL}">{Tag}</a>
