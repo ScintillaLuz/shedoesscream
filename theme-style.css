@@ -278,6 +278,11 @@ nav {
   color: #9B9B9B;
 }
 
+.nav-search [placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.2s 0.2s ease;
+  opacity: 0;
+}
+
 /* Sidebars */
 
 .sidebar-engage,
