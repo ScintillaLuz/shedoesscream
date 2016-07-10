@@ -64,16 +64,15 @@
 
       <header>
         <nav>
-          <div class="nav-container">
-            <ul class="nav-list">
-              <li class="nav-item"><a href="">Articles</a></li>
-              <li class="nav-item"><a href="">Links</a></li>
-              <li class="nav-item"><a href="">About me</a></li>
-              <li class="nav-item contact-email"><a href="mailto:shedoesscream@gmail.com">Email me</a></li>
-            </ul>
-            <form action="/search" method="get" class="nav-search">
-              <input type="search" name="q" value="{SearchQuery}" placeholder="search articles&hellip;" class="nav-input"/>
-              <input type="submit" value="Go"/>
+          <ul class="nav-items">
+            <li class="nav-item"><a href="">Articles</a></li>
+            <li class="nav-item"><a href="">Links</a></li>
+            <li class="nav-item"><a href="">About me</a></li>
+            <li class="nav-item contact-email"><a href="mailto:shedoesscream@gmail.com">Email me</a></li>
+          </ul>
+          <div class="nav-search">
+            <form action="/search" method="get" class="search-input">
+              <input type="search" name="q" value="{SearchQuery}" placeholder="Search for articles&hellip;" class="nav-input"/><input type="submit" value="Search"/>
             </form>
           </div>
         </nav>
@@ -464,9 +463,12 @@
           {/block:Pagination}
         </div>
 
-        <div class="sidebar-engage">
+        <div class="sidebar">
+
+          <div class="sidebar-engage">
           {block:Description}
           <div class="about">
+
             <h5>Why {Title}?</h5>
             <p>{Description}</p>
           </div>
@@ -478,7 +480,7 @@
             <p>New articles &amp; suggested reads in your e-mail, not that often and not that regularly. Basically when I have time. But cool stuff.</p>
 
             <!-- Begin MailChimp Signup Form -->
-              <div id="mc_embed_signup">
+              <div id="mc_embed_signup" class="newsletter-signup">
               <form action="//tumblr.us10.list-manage.com/subscribe/post?u=70e9c16272b17e864a8f08a8e&amp;id=23b8f9a747" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                   <div id="mc_embed_signup_scroll">
 
@@ -504,9 +506,9 @@
             <img src="" alt="">
             <a href="">Get SDS in your feed</a>
           </div>
-        </div>
+          </div>
 
-        <div class="sidebar-explore">
+          <div class="sidebar-explore">
 
           {block:HasPages}
           <div class="other-pages">
@@ -536,6 +538,7 @@
               <li><a href=""></a></li>
               <li><a href=""></a></li>
             </ul>
+          </div>
           </div>
         </div>
       </div>
