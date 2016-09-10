@@ -10,7 +10,7 @@
 
     Text = #2C2C2C
     Background quotes in text, about box = #E9E5F1
-    Background header, newsletter box, quote post = #343434
+    Background header, newsletter box, quote post = #292929
 
 
 
@@ -186,13 +186,13 @@
 
   header,
   footer {
-    padding: 1.2rem 0;
+    padding: 1.5rem 0;
 
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 400;
 
-    background-color: #343434;
+    background-color: #292929;
     box-shadow: 0px 2px 3px -2px rgba(68, 68, 68, 0.6);
 
   }
@@ -381,7 +381,7 @@
   }
 
   .sidebar-engage .newsletter {
-    background-color: #343434;
+    background-color: #292929;
   }
 
   .sidebar-engage .newsletter h5 {
@@ -399,8 +399,7 @@
   }
 
   .sidebar-engage #mc_embed_signup input[type=email] {
-    background-color: #F3F3F3;
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.6);
+    background-color: #494949;
     padding: 0.75rem;
 
     border: none;
@@ -619,15 +618,16 @@
   }
 
   .photo-post .post-container .media-container,
-  .video-post .post-container .media-container,
-  .audio-post .post-container .media-container {
+  .video-post .post-container .media-container {
     padding: 0 0 1rem 0;
   }
 
   .audio-post .post-container .media-container {
+    padding-bottom: 1.5rem;
     margin: -1px;
   }
 
+  /*The audio player is as wide as the text column*/
   .video-post .post-container .post-body,
   .audio-post .post-container .post-body {
     padding: 0 2.375rem 1.125rem 2.375rem;
@@ -638,13 +638,13 @@
   .audio-post h2 {
     font-size: 1.5rem;
     line-height: 1.5em;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 0.750rem 0;
+    font-weight: 700;
   }
 
   .photo-post h2 a,
   .video-post h2 a,
   .audio-post h2 a {
-    font-weight: 700;
     color: #2C2C2C;
     border-bottom: 1px solid #2C2C2C;
 
@@ -661,10 +661,16 @@
     border-bottom: 1px solid #A84FCA;
   }
 
+  .photo-post .post-container .media-container h2,
+  .video-post .post-container .media-container h2,
+  .audio-post .post-container .media-container h2 {
+    margin: 0 0 0.750rem 0;
+  }
+
   /* Quote post */
 
   .quote-post .post-container {
-    background-color: #343434;
+    background-color: #292929;
   }
 
   .quote-post .post-container .post-body blockquote {
